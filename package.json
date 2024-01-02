@@ -1,0 +1,7 @@
+{
+  "name": "mono-repo-proj",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "esbuild src/index.js --bundle --outfile=dist/index.js"
+  }
+}

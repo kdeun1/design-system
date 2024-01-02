@@ -1,0 +1,16 @@
+*.DS_Store
+*.log
+*.tsbuildinfo
+.idea
+
+**/packge-lock.json
+**/node_modules/
+
+**/dist/*
+dist
+
+# storybook
+**/storybook-static/
+
+# production
+**/build

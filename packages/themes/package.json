@@ -1,0 +1,25 @@
+{
+  "name": "@mono-repo/themes",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "pnpm run clean && pnpm run build:js && pnpm run build:type",
+    "build:cjs": "esbuild src/index.ts --format=cjs --bundle --outfile=dist/index.js",
+    "build:cjs-min": "esbuild src/index.ts --minify --format=cjs --bundle --outfile=dist/index.js",
+    "build:js": "node build.js",
+    "build:type": "tsc --emitDeclarationOnly",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "esbuild": "0.16.17",
+    "typescript": "^5.3.3"
+  }
+}
